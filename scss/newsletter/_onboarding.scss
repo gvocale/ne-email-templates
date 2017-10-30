@@ -1,0 +1,57 @@
+.onboarding {
+
+  &__signature {
+    @include margin-top;
+  }
+
+  &__header {
+    width: 100%;
+    background-color: $gray-lightest;
+    background-image: linear-gradient(to top,#e6ebf0 0,#e6e9f0 100%);
+  }
+
+  &__headline-padding {
+    @include padding-top(.5);
+    @include padding-bottom(1);
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  &__body-padding {
+    @include padding-top(.25);
+    @include padding-bottom(.25);
+
+    &--start {
+      @include padding-top(1);
+    }
+  }
+
+  &__ul {
+    @include padding-top(.25);
+  }
+
+  &__title {
+    color: $gray;
+    font-size: $f-4;
+  }
+
+  &__steps-padding {
+  }
+
+  &__steps-bullet {
+    width: px(1.75rem);
+    font-size: $f-7;
+    color: $gray;
+    font-weight: $font-weight-light;
+    vertical-align: top;
+    @include padding-top(.25);
+    @include padding-bottom(.25);
+  }
+
+  &__steps-body {
+    width: 100%;
+    @include padding-top(.25);
+    @include padding-bottom(.25);
+  }
+}

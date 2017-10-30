@@ -1,0 +1,70 @@
+.survey {
+
+  &__cell {
+    @include padding-top(.5);
+    @include padding-bottom(.5);
+  }
+
+  &__background {
+    background-color: $gray-lightest;
+    border-radius: px(.5rem);
+    @include padding(.75);
+
+    @media ($lg) {
+      @include padding-bottom(.5);
+      @include padding-top(.5);
+    }
+  }
+
+  &__img {
+    width: px(11.25rem);
+  }
+
+  &__subhead {
+    @include margin-bottom(.25);
+  }
+
+  &__text-wrap {
+    vertical-align: middle;
+    width: auto;
+    text-align: center;
+    @include padding-top(.5);
+    @include padding-bottom(.5);
+
+    @media ($lg) {
+      text-align: left !important;
+    }
+  }
+
+  &__img-wrap {
+    vertical-align: middle;
+    text-align: center;
+    @include padding-top(.5);
+    @include padding-bottom(.5);
+    width: px(11.25rem);
+    margin: 0 auto;
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+
+    @media ($lg) {
+      display: table-row !important;
+    }
+  }
+
+  &__heading {
+    @include headline;
+    font-size: $f-8;
+    font-weight: $font-weight-light;
+    @include margin-bottom(.25);
+  }
+
+  &__subhead {
+    @include p;
+    font-size: $f-5;
+    margin: 0;
+    @include margin-bottom(.5);
+  }
+}

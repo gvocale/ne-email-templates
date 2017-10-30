@@ -1,0 +1,7 @@
+.pipe {
+  @include pipe-table;
+
+  &__cell {
+    @include pipe-cell;
+  }
+}

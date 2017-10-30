@@ -1,0 +1,61 @@
+<!-- partial:../../partials/head/head.html -->
+<!-- partial -->
+<link rel="stylesheet" type="text/css" href="../../css/style-mobile.css">
+<link rel="stylesheet" type="text/css" href="../../css/style-desktop.css" inline>
+<link rel="stylesheet" type="text/css" href="../../css/style-hover.css" inline>
+<title>You have been added to a waitlist to see <%= @provider.doctor_name %></title>
+</head>
+
+<body>
+	<table width="100%">
+		<tr>
+			<td>
+
+				<!-- Pipe -->
+				<table width="100%" class="pipe">
+					<tr>
+						<td class="pipe__cell">
+
+							<!-- partial:../../partials/header/header-provider.html -->
+							<!-- partial -->
+
+							<!-- Body -->
+							<table width="100%" class="body">
+								<tr>
+									<td class="body__cell">
+										<p class="p">
+											<strong style="font-weight:400">Hi <%= @patient.name %></strong>,<br>
+										</p>
+										<% if @action == 'added' %>
+										<p class="p">
+											You've been added to a waitlist to see <%= @provider.name %> between <%= @waitlist.start_time.strftime('%b %d at %I:%M %p') %> and <%= @waitlist.end_time.strftime('%b %d at %I:%M %p') %>.
+										</p>
+										<p class="p">
+											We'll send you a notification as soon as a slot opens up during that time.
+										</p>
+										<% elsif @action == 'removed' %>
+										<p class="p">
+											You've been removed from the waitlist to see <%= @provider.name %> between <%= @waitlist.start_time.strftime('%b %d at %I:%M %p') %> and <%= @waitlist.end_time.strftime('%b %d at %I:%M %p') %>.
+										</p>
+										<% end %>
+									</td>
+								</tr>
+							</table>
+							<!-- Body Copy End -->
+
+							<!-- partial:../../partials/divider/divider-padded.html -->
+							<!-- partial -->
+
+							<!-- partial:../../partials/footer/footer-provider.html -->
+							<!-- partial -->
+
+						</td>
+					</tr>
+				</table>
+				<!-- Pipe End -->
+
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

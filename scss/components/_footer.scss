@@ -1,0 +1,148 @@
+.footer {
+
+	&__tbody {
+
+		@media ($lg) {
+			display: flex;
+			width: 100%;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			@include padding-top(.25);
+			@include padding-bottom(.5);
+		}
+	}
+
+	&__left {
+
+		&__tr {
+			@media ($lg) {
+				display: inline-flex !important;
+				float: left !important;
+			}
+		}
+
+		&__td {
+			@include padding(.25);
+			text-align: center;
+
+			@media ($lg) {
+				padding: 0 !important;
+				text-align: left !important;
+			}
+		}
+	}
+
+	&__link {
+		@include margin-bottom(.125);
+	}
+
+	&__top-padding {
+		@include padding-top(.375);
+	}
+
+	&__right {
+
+		&__tr {
+			@media ($lg) {
+				display: inline-flex !important;
+				float: right !important;
+			}
+		}
+
+		&__td {
+			@include padding(.25);
+			text-align: center;
+
+			@media ($lg) {
+				padding: 0 !important;
+				text-align: right !important;
+			}
+		}
+
+		&__link {
+			display: inline-block;
+		}
+	}
+
+	&__logo-img {
+		@include headline;
+		color: $gray;
+		font-size: $f-3;
+
+		&--hover {
+			display: none;
+		}
+	}
+
+	&--newsletter {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+		@media ($lg) {
+			justify-content: space-between;
+		}
+	}
+
+	.link--unsubscribe {
+		@include margin-bottom(.5);
+		display: block;
+		letter-spacing: 0.01em;
+	}
+
+	&__address,
+	&__p {
+		@include p;
+		width: 100%;
+		font-size: $f-4;
+		color: $gray;
+	}
+
+	&__social-header {
+		vertical-align: middle;
+		padding-right: 8px;
+	}
+
+	&__social-button {
+		vertical-align: middle;
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+
+	&__social-button-img {
+		@include headline;
+		color: $gray;
+		font-size: $f-3;
+    width: px(1.75rem);
+    height: px(1.75rem);
+
+		&--hover {
+			width: px(1.75rem);
+			height: px(1.75rem);
+			display: none;
+		}
+  }
+}
+
+
+.btn:hover {
+
+  .footer__social-button-img {
+    display: none !important;
+  }
+
+  .footer__social-button-img--hover {
+    display: block !important;
+  }
+
+	.footer__logo-img {
+		display: none !important;
+	}
+
+	.footer__logo-img--hover {
+		display: block !important;
+	}
+}

@@ -1,0 +1,17 @@
+.image {
+
+  &__img {
+    width: 100%;
+    text-align: center;
+    @include headline;
+    font-weight: $font-weight-normal;
+    font-size: $f-5;
+    color: $black;
+    display: block;
+  }
+
+  &__cell {
+    @include padding-top(.5);
+    @include padding-bottom(.5);
+  }
+}

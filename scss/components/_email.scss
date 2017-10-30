@@ -1,0 +1,14 @@
+.email {
+
+	&__table {
+		@include pipe-table;
+	}
+
+	&__td {
+		@include pipe-cell;
+
+		&--padded {
+			@include padding-bottom(1);
+		}
+	}
+}

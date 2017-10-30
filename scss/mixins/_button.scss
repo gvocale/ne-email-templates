@@ -1,0 +1,71 @@
+@mixin button-font {
+  font-family: $roboto;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  line-height: $f-leading;
+  letter-spacing: $tracked-tight;
+}
+
+@mixin button {
+  @include button-font;
+  border-radius: 48px;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  transform: translateY(0px);
+
+  &:hover,
+  &:focus {
+    transform: translateY(1px) !important;
+  }
+}
+
+@mixin button--lg {
+  font-size: $f-5;
+  padding: 12px 24px;
+
+  @media ($lg) {
+    padding: 16px 32px !important;
+  }
+}
+
+@mixin button--img {
+  border-radius: none;
+}
+
+@mixin button--primary {
+  background-color: $green;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $white !important;
+    background-color: darken($green, 5%) !important;
+  }
+}
+
+@mixin button--secondary {
+  background-color: $cyan;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $white !important;
+    background-color: darken($cyan, 5%) !important;
+  }
+}
+
+@mixin button--tertiary {
+  background-color: $gray-lighter;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $white !important;
+    background-color: darken($gray-lighter 5%) !important;
+  }
+}

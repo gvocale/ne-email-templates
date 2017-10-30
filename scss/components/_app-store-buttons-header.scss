@@ -1,0 +1,15 @@
+.app-store-buttons-header {
+
+  &__cell {
+    text-align: center;
+    @include padding-top(.5);
+    @include padding-bottom(.125);
+  }
+
+  &__heading {
+    @include headline;
+    font-weight: $font-weight-normal;
+    font-size: $f-5;
+    @include margin-bottom(.125);
+  }
+}

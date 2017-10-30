@@ -1,0 +1,35 @@
+// Colors
+$white: #FFFFFF;
+
+$black-pure: #000000;
+$black: #464b50;
+$black-light: lighten($black, 3%);
+$black-nav: $black-light;
+$black-lighter: lighten($black, 6%);
+$gray-dark: #858A8E;
+$gray: #A8ABAE;
+$gray-light: #C3C5C7;
+$gray-lighter: #DCDEDF;
+$gray-lightest: #EDEEEE;
+$gray-6: rgba($black,0.03);
+$cyan: #00CBE6;
+$cyan-dark: darken($cyan, 5%);
+$cyan-darker: darken($cyan, 10%);
+$cyan-faded: linear-gradient(to left, rgba($cyan, .1), rgba($cyan, .1)),
+linear-gradient(to left, rgba($white, 1), rgba($white, 1));
+$cyan-faded-dark: linear-gradient(to left, rgba($cyan, .15), rgba($cyan, .15)),
+linear-gradient(to left, rgba($white, 1), rgba($white, 1));
+$green: #70D486;
+$green-lighter: #8CE097;
+$green-dark: darken($green, 5%);
+$green-darker: darken($green, 10%);
+$red: #FF7581;
+$orange: #FF9159;
+$yellow: #FFC76A;
+$yellow-lighter: #FFD677;
+$yellow-faded: linear-gradient(to left, rgba($yellow, .5), rgba($yellow, .5)),
+linear-gradient(to left, rgba($white, 1), rgba($white, 1));
+$lavander: #7F98DE;
+$lavander-lighter: #96ACE8;
+$lavander-faded: linear-gradient(to left, rgba($lavander, .15), rgba($lavander, .15)),
+linear-gradient(to left, rgba($white, 1), rgba($white, 1));

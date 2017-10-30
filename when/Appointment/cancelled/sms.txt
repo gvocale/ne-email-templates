@@ -1,0 +1,1 @@
+Your appointment with Dr. PROVIDERLASTNAME has been cancelled. Click here to book a new visit: INTAKELINK Reply STOP to unsubscribe

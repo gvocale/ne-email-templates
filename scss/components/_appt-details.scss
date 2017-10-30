@@ -1,0 +1,25 @@
+.appt-details {
+
+  &__cell {
+    @include padding-top(.25);
+    @include padding-bottom(.25);
+  }
+
+  &__eyebrow {
+    @include eyebrow;
+    @include margin-bottom(.125);
+    font-size: $f-3;
+  }
+
+  &__date {
+    @include p;
+    margin-top: 0;
+    font-size: $f-6;
+  }
+
+  &__address {
+    @include p;
+    margin-top: 0;
+    font-size: $f-5;
+  }
+}

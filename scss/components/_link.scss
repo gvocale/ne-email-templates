@@ -1,0 +1,31 @@
+.link {
+  color: darken($cyan, 5%);
+  @include link;
+
+  &--underline {
+    @include link-underline;
+  }
+
+  &--unsubscribe {
+    white-space: nowrap;
+    color: $gray;
+    font-weight: $font-weight-bold;
+    font-size: $f-4;
+
+    &:hover {
+      color: $cyan !important;
+    }
+  }
+
+  &--primary {
+    @include link-primary;
+  }
+
+  &--secondary {
+    @include link-secondary;
+  }
+
+  &--tertiary {
+    @include link-tertiary;
+  }
+}

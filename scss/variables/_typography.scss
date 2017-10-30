@@ -1,0 +1,37 @@
+// Font Family
+$roboto: Roboto, sans-serif;
+
+// Font Weight
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+
+// Type scale
+// Base 1em - Ratio 1.2 (Minor Third)
+// http://www.modularscale.com/?1&em&1.2&web&text
+$f-1: .482 * 16px;
+$f-2: .579 * 16px;
+$f-3: .694 * 16px; // 11.104px
+$f-4: .833 * 16px; // 13.328px
+$f-5: 1 * 16px;
+$f-6: 1.2 * 16px; // 19.2px
+$f-7: 1.44 * 16px; // 23.04px
+$f-8: 1.728 * 16px; // 27.648px
+$f-9: 2.074 * 16px;
+$f-10: 2.488 * 16px;
+$f-11: 2.986 * 16px;
+$f-12: 3.583 * 16px;
+
+// Line Heights
+$f-solid: 1;
+$f-leading: 1.25;
+$f-prose: 1.5;
+
+// Letter Spacing / Tracking
+$tracked-large: .03em;
+$tracked-larger: .1em;
+$tracked-largest: .25em;
+$tracked-tight: -0.005em;
+$tracked-tighter: -0.01em;
+$tracked-tightest: -0.025em;

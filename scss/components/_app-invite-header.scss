@@ -1,0 +1,11 @@
+.app-invite-header {
+
+  &__cell {
+    text-align: center;
+    @include padding-top(.5);
+  }
+
+  .h4 {
+    line-height: 1.4;
+  }
+}

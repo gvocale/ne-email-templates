@@ -1,0 +1,47 @@
+@mixin header-font {
+	font-family: $roboto;
+	font-weight: $font-weight-normal;
+	-webkit-font-smoothing: antialiased;
+	line-height: $f-leading;
+	letter-spacing: $tracked-tightest;
+	color: $black;
+
+	strong {
+		font-weight: $font-weight-bold;
+	}
+}
+
+@mixin headline {
+	font-family: $roboto;
+	-webkit-font-smoothing: antialiased;
+	line-height: $f-leading;
+	letter-spacing: $tracked-tightest;
+	color: $black;
+
+	strong {
+		font-weight: $font-weight-bold;
+	}
+}
+
+@mixin p {
+	font-family: $roboto;
+	font-weight: $font-weight-normal;
+	-webkit-font-smoothing: antialiased;
+	line-height: $f-prose;
+	letter-spacing: $tracked-tight;
+	color: $black;
+
+	strong {
+		font-weight: $font-weight-bold;
+	}
+}
+
+@mixin eyebrow {
+	-webkit-font-smoothing: antialiased;
+	font-family: $roboto;
+	font-weight: $font-weight-bold;
+	letter-spacing: $tracked-larger;
+	line-height: $f-leading;
+	text-transform: uppercase;
+	color: $gray;
+}

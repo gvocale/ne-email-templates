@@ -1,0 +1,2 @@
+Hi PATIENTFIRSTNAME 
+We see that you cancelled your appointment with PROVIDERNAME at APPTTIME. Would you like to book another appointment? You can do so here: INTAKELINK

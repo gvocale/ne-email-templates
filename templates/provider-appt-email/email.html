@@ -1,0 +1,86 @@
+<!-- partial:../../partials/head/head.html -->
+<!-- partial -->
+<link rel="stylesheet" type="text/css" href="../../css/style-mobile.css">
+<link rel="stylesheet" type="text/css" href="../../css/style-desktop.css" inline>
+<link rel="stylesheet" type="text/css" href="../../css/style-hover.css" inline>
+<title><%= @header.html_safe %></title>
+</head>
+
+<body>
+	<table width="100%">
+		<tr>
+			<td>
+
+				<!-- Pipe -->
+				<table width="100%" class="pipe">
+					<tr>
+						<td class="pipe__cell">
+
+							<!-- partial:../../partials/header/header-nexhealth.html -->
+							<!-- partial -->
+
+							<!-- Body -->
+							<table width="100%" class="body">
+								<tr>
+									<td class="body__cell">
+										<h2 class="h2"><%= @header.html_safe %></h2>
+										<!-- Requires Action -->
+										<% if @required_action == true %>
+										<p class="p">
+											Please <%= @to_do %> this appointment in your practice management software <%= @emr.display_name %>.
+										</p>
+										<% if @action == 'requested' || @action == 'rescheduled' %>
+										<p class="p">
+											Then let the patient know you've confirmed the appointment on
+											<a href="http://nexhealth.com/app/dashboard" style="color: #00CBE6 !important; margin: 0; text-decoration: none;" class="link-primary">
+												<strong style="font-weight: 400">
+													the Nexhealth dashboard.
+												</strong>
+											</a>
+										</p>
+										<% end %>
+										<% else %>
+										<% if @action == 'requested' || @action == 'rescheduled' %>
+										<p class="p">You can confirm this appointment on the
+											<a href="https://nexhealth.com/app/dashboard" style="color: #00CBE6 !important; margin: 0; text-decoration: none;" class="link-primary">
+												<strong style="font-weight: 400">NexHealth dashboard
+												</strong>
+											</a>.
+										</p>
+										<% elsif @action == 'cancelled'%>
+										<p class="p">To fill in this appointment slot, visit:
+											<a href="https://nexhealth.com/app/appointments" style="color: #00CBE6 !important; margin: 0; text-decoration: none;" class="link-primary">
+												<strong style="font-weight: 400">https://nexhealth.com/app/appointments
+												</strong>
+											</a>
+										</p>
+										<% end %>
+										<% end %>
+
+										<p class="p">
+											If there are any scheduling conflicts, you may contact the patient using our <a href="https://nexhealth.com/app/patients/<%= @patient.id %>/conversations/" style="color: #00CBE6 !important; margin: 0; text-decoration: none;" class="link-primary"><strong style="font-weight: 400">messages feature</strong></a>.
+										</p>
+										<p class="p">
+											You can update your email notifications in the <a href="https://nexhealth.com/app/settings/notifications" style="color: #00CBE6 !important; margin: 0; text-decoration: none;" class="link-primary"><strong style="font-weight: 400">settings page</strong></a>.
+										</p>
+									</td>
+								</tr>
+							</table>
+							<!-- Body End -->
+
+							<!-- partial:../../partials/divider/divider-padded.html -->
+							<!-- partial -->
+
+							<!-- partial:../../partials/footer/footer-nexhealth.html -->
+							<!-- partial -->
+
+						</td>
+					</tr>
+				</table>
+				<!-- Pipe End -->
+
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

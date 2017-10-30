@@ -1,0 +1,2 @@
+Hi PATIENTFIRSTNAME 
+We see that you missed your appointment with PROVIDERNAME at APPTTIME. Please book another appointment by visiting this link: INTAKELINK

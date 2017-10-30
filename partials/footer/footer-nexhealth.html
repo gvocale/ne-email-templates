@@ -1,0 +1,26 @@
+<!-- Footer NexHealth -->
+<table width="100%">
+  <tr>
+    <td class="footer__top-padding"></td>
+    <td class="footer__top-padding"></td>
+  </tr>
+</table>
+<table width="100%" class="footer">
+  <tbody class="footer__tbody">
+    <tr class="footer__left__tr">
+      <td class="footer__left__td">
+        <p class="footer__p">If you have any questions or concerns, please contact us at <a class="link link--unsubscribe link--underline" href="mailto:hello@nexhealth.com">hello@nexhealth.com</a>.</p>
+          <a class="link link--unsubscribe link--underline" href="https://nexhealth.info/unsubscribe?email=<%= h CGI.escape(@user.email) %>&code=<%= h CGI.escape(@user.activation_code.to_s) %>">Opt-out from of all future communications.</a>
+        </p>
+      </td>
+    </tr>
+    <tr class="footer__right__tr">
+      <td class="footer__right__td">
+        <a class="footer__logo__link" href="http://www.nexhealth.com" alt="NexHealth" target="_blank">
+          <img class="footer__logo__img footer__logo__img--nexhealth" src="https://storage.googleapis.com/nexassets/email/img/nexhealth-logo-gray.png" alt="Powered by NexHealth" width="82" >
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- Footer NexHealth End -->

@@ -1,0 +1,52 @@
+html,
+body {
+	margin: 0 auto !important;
+	padding: 0 !important;
+	height: 100% !important;
+	width: 100% !important;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	box-sizing: border-box;
+}
+
+img, a img {
+	border:0;
+	outline: none;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin:0;
+	padding:0;
+}
+
+table,
+td {
+	mso-table-lspace: 0pt !important;
+	mso-table-rspace: 0pt !important;
+}
+
+table {
+	border-spacing: 0 !important;
+	border-collapse: collapse !important;
+	table-layout: fixed !important;
+	margin: 0 auto !important;
+}
+
+table table table {
+	table-layout: auto;
+}
+
+img {
+	-ms-interpolation-mode:bicubic;
+}
+
+*[x-apple-data-detectors] {
+	color: inherit !important;
+	text-decoration: none !important;
+}

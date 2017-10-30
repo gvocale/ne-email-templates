@@ -1,0 +1,13 @@
+@import "variables/_breakpoints";
+@import "variables/_colors";
+@import "variables/_typography";
+@import "mixins/_link";
+@import "mixins/_typography";
+@import "wysiwyg/_wysiwyg";
+
+body {
+	padding: 1rem;
+  box-sizing: border-box;
+}
+
+@include wysiwyg;

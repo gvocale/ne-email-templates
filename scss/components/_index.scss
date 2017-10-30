@@ -1,0 +1,27 @@
+.index {
+  @include padding-top(1);
+  @include pipe-table;
+  @include pipe-cell;
+
+  &__inlined {
+    padding-left: .5em;
+    font-size: .75em;
+    display: inline-block;
+  }
+
+  &__h1 {
+    @include headline;
+    font-size: $f-7;
+    @include padding-bottom(.25);
+  }
+
+  &__section {
+    @include padding-top(1);
+    @include padding-bottom(1);
+  }
+
+  &__li {
+    @include padding-top(.125);
+    @include padding-bottom(.125);
+  }
+}

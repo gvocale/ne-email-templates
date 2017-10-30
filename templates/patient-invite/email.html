@@ -1,0 +1,84 @@
+<!-- partial:../../partials/head/head.html -->
+<!-- partial -->
+<link rel="stylesheet" type="text/css" href="../../css/style-mobile.css">
+<link rel="stylesheet" type="text/css" href="../../css/style-desktop.css" inline>
+<link rel="stylesheet" type="text/css" href="../../css/style-hover.css" inline>
+<title><%= @doctor.name %>  has invited you to NexHealth, an appointment booking app!</title>
+</head>
+
+<body>
+	<table width="100%">
+		<tr>
+			<td>
+
+				<!-- Pipe -->
+				<table width="100%" class="pipe">
+					<tr>
+						<td class="pipe__cell">
+
+							<!-- partial:../../partials/header/header-nexhealth-provider.html -->
+							<!-- partial -->
+
+							<!-- Header -->
+							<table width="100%" class="header">
+								<tr>
+									<td class="header__cell">
+										<h1 class="h1">Book your appointment with <br> the NexHealth app.</h1>
+									</td>
+								</tr>
+							</table>
+							<!-- Header End -->
+
+							<!-- Body -->
+							<table width="100%" class="body">
+								<tr>
+									<td class="body__cell">
+										<h3 class="h3"><strong style="font-weight: 500; ">Hi <%= @patient.name %>!</strong></h3>
+										<p class="p">
+											<%= @doctor.name %>  from <%= @location.name %> has invited you to use NexHealth, an appointment booking app. With NexHealth, you can skip the phone call and book your next appointment from your smartphone!
+											<!-- Insert custom invite message from provider here -->
+											<%= @body.html_safe  %>
+										</p>
+									</td>
+								</tr>
+							</table>
+							<!-- Body End -->
+
+							<!-- partial:../../partials/divider/divider-padded.html -->
+							<!-- partial -->
+
+							<table width="100%" class="app-invite-header">
+                <tr>
+                  <td class="app-invite-header__cell">
+										<h4 class="h4">
+											Use your email and this unique code to sign up
+										</h4>
+									</td>
+								</tr>
+							</table>
+
+							<!-- partial:../../partials/app-invite/app-invite-card.html -->
+							<!-- partial -->
+
+							<!-- partial:../../partials/divider/divider-padded.html -->
+							<!-- partial -->
+
+							<!-- partial:../../partials/sender/sent-on-behalf.html -->
+							<!-- partial -->
+
+							<!-- partial:../../partials/divider/divider-padded.html -->
+							<!-- partial -->
+
+							<!-- partial:../../partials/footer/footer-nexhealth.html -->
+							<!-- partial -->
+
+						</td>
+					</tr>
+				</table>
+				<!-- Pipe End -->
+
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

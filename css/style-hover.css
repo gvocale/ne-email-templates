@@ -1,0 +1,112 @@
+.btn:hover {
+  transform: translateY(1px) !important;
+}
+
+.btn--primary:hover {
+  color: #FFFFFF !important;
+  background-color: #5cce75 !important;
+}
+
+.btn--secondary:hover {
+  color: #FFFFFF !important;
+  background-color: #5cce75 !important;
+}
+
+.btn--tertiary:hover {
+  color: #FFFFFF !important;
+  background-color: #5cce75 !important;
+}
+
+.doctor-card__address .link--underline:hover {
+  background-position: left 1em !important;
+}
+
+.btn:hover .footer__social-button-img {
+  display: none !important;
+}
+
+.btn:hover .footer__social-button-img--hover {
+  display: block !important;
+}
+
+.btn:hover .footer__logo-img {
+  display: none !important;
+}
+
+.btn:hover .footer__logo-img--hover {
+  display: block !important;
+}
+
+.link--underline:hover {
+  background-image: linear-gradient(to bottom, currentColor 25%, transparent 25%) !important;
+  background-size: 100% 0.25em !important;
+  background-position: left 1.1em !important;
+}
+
+.link--unsubscribe:hover {
+  color: #00CBE6 !important;
+}
+
+.link--primary:hover {
+  color: #00b4cd !important;
+}
+
+.link--primary.link--underline:hover {
+  color: #00CBE6 !important;
+}
+
+.link--secondary:hover {
+  color: #00CBE6 !important;
+}
+
+.link--secondary.link--underline:hover {
+  color: #464b50 !important;
+}
+
+.link--tertiary:hover {
+  color: #00CBE6 !important;
+}
+
+.link--tertiary.link--underline:hover {
+  color: #858A8E !important;
+}
+
+.sig__link:hover {
+  background-position: left 1.05em !important;
+}
+
+.sig__legal-link:hover {
+  color: #464b50 !important;
+}
+
+.time-slots__arrow-right:hover {
+  opacity: .8 !important;
+}
+
+.time-slots__more:hover .time-slots__arrow-down {
+  display: none !important;
+}
+
+.time-slots__more:hover .time-slots__arrow-down-inverse {
+  display: inline-block !important;
+  max-height: none !important;
+  overflow: visible !important;
+  width: auto !important;
+  height: 10px !important;
+  max-width: none !important;
+}
+
+a.time-slots__slot:hover {
+  background-color: #00CBE6 !important;
+  color: #FFFFFF !important;
+  transform: translateY(1px) !important;
+}
+
+.feature__button:hover {
+  transform: translateY(1px) !important;
+}
+
+.feature__button:hover {
+  color: #FFFFFF !important;
+  background-color: #5cce75 !important;
+}

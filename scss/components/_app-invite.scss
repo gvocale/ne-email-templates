@@ -1,0 +1,41 @@
+.app-invite {
+
+  &__cell {
+    @include padding-top(.25);
+    @include padding-bottom(.25);
+  }
+
+  &__card {
+    text-align: center;
+    @include padding(.5);
+    background-color: $gray-lightest;
+    border-radius: px(.5rem);
+
+    .app-store-buttons__header {
+      @include padding-top(.25);
+    }
+
+    .app-store-buttons__buttons {
+      @include padding-bottom(.25);
+      padding-left: px(4rem);
+      padding-right: px(4rem);
+    }
+  }
+
+  &__group {
+    @include padding-top(.125);
+    @include padding-bottom(.125);
+  }
+
+  &__code,
+  &__email {
+    @include p;
+    font-size: $f-5;
+    font-weight: $font-weight-bold;
+  }
+
+  &__buttons {
+    @include padding-top(.125);
+    @include padding-bottom(.125);
+  }
+}

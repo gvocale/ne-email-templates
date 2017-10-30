@@ -1,0 +1,41 @@
+.doctor-card {
+
+  &__address {
+    margin-top: 0;
+    @include p;
+    font-size: $f-4;
+
+    .link--underline {
+      background-position: right 1em;
+
+      &:hover {
+        background-position: left 1em !important;
+      }
+    }
+  }
+
+  &__name {
+    @include p;
+    font-size: $f-5;
+  }
+
+  &__avatar {
+    width: px(5rem);
+    padding-right: px(1rem);
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+
+  &__avatar-img {
+    width: px(4rem);
+    height: auto;
+  }
+
+  &__info {
+    width: 75%;
+
+    .h6 {
+      margin-bottom: .25em;
+    }
+  }
+}

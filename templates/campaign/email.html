@@ -1,0 +1,57 @@
+<!-- partial:../../partials/head/head.html -->
+<!-- partial -->
+<link rel="stylesheet" type="text/css" href="../../css/style-mobile.css">
+<link rel="stylesheet" type="text/css" href="../../css/style-desktop.css" inline>
+<link rel="stylesheet" type="text/css" href="../../css/style-hover.css" inline>
+<title><%= @sender.name="" %=""> sent a message<%= @user="=" @target="" ?="" "="" to="" you"="" :="" ""="" %=""></%=></%=></title>
+</head>
+
+<body>
+  <table width="100%">
+    <tr>
+      <td>
+
+        <!-- Pipe -->
+        <table width="100%" class="pipe">
+          <tr>
+            <td class="pipe__cell">
+
+              <!-- partial:../../partials/header/header-provider.html -->
+              <!-- partial -->
+
+              <!-- Body Copy -->
+              <table width="100%" class="body">
+                <tr>
+                  <td class="body__cell">
+                    <%= simple_format(@body)="" %="">
+                    </%=>
+                  </td>
+                </tr>
+              </table>
+              <!-- Body Copy End -->
+
+              <!-- partial:../../partials/divider/divider-padded.html -->
+              <!-- partial -->
+
+              <!-- partial:../../partials/buttons/app-store-buttons-header.html -->
+              <!-- partial -->
+
+              <!-- partial:../../partials/buttons/app-store-buttons.html -->
+              <!-- partial -->
+
+              <!-- partial:../../partials/divider/divider-padded.html -->
+              <!-- partial -->
+
+              <!-- partial:../../partials/footer/footer-provider.html -->
+              <!-- partial -->
+
+            </td>
+          </tr>
+        </table>
+        <!-- Pipe End -->
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

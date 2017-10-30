@@ -1,0 +1,98 @@
+.feature {
+	@include margin-bottom(.75);
+
+	&__background {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		height: 300px;
+
+		@media ($lg) {
+			height: 500px !important;
+		}
+
+		@media ($xl) {
+			height: 600px !important;
+		}
+	}
+
+	&__table {
+		height: 300px;
+
+		@media ($lg) {
+			height: 500px !important;
+		}
+
+		@media ($xl) {
+			height: 600px !important;
+		}
+	}
+
+	&__logo {
+		margin: 0;
+		@include padding-top(1.5);
+		@include padding-bottom(1.5);
+		text-align: center;
+		width: 100%;
+
+		&__link {
+			outline: none;
+			text-decoration: none;
+		}
+
+		&__img {
+			width: 100%;
+			max-width: px(7rem);
+			padding-left: 5%;
+			padding-right: 5%;
+			color: $white;
+			font-size: $f-6;
+			font-weight: $font-weight-bold;
+			box-sizing: content-box;
+
+			@media ($lg) {
+				max-width: px(8rem) !important;
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+
+			}
+		}
+	}
+
+	&__headline {
+		@include headline;
+		color: $white;
+		font-size: $f-7;
+		max-width: 20em;
+		@include margin-bottom(.5);
+		margin-left: auto;
+		margin-right: auto;
+
+		@media (-webkit-min-device-pixel-ratio: 1) and ($md) {
+			font-size: $f-8 !important;
+		}
+
+		@media ($lg) {
+			font-size: $f-10 !important;
+		}
+	}
+
+	&__text {
+		@include padding-bottom;
+		@include padding-top;
+		text-align: center;
+		width: 90%;
+		padding-left: 5%;
+		padding-right: 5%;
+		vertical-align: bottom;
+		box-sizing: border-box;
+	}
+
+	&__button {
+		@include button;
+		@include button--primary;
+	}
+}

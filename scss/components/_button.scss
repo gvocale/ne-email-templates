@@ -1,0 +1,36 @@
+.btn {
+  @include button;
+
+  &--primary {
+    @include button--primary;
+  }
+
+  &--secondary {
+    @include button--primary;
+  }
+
+  &--tertiary {
+    @include button--primary;
+  }
+
+  &--lg {
+    @include button--lg;
+  }
+
+  &--img {
+    @include button--img;
+  }
+}
+
+
+.button {
+
+  &__cell {
+    @include padding-top(.25);
+    @include padding-bottom(.25);
+  }
+
+  &__center {
+    text-align: center;
+  }
+}

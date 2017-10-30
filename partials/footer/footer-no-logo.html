@@ -1,0 +1,17 @@
+<!-- Footer No Logo -->
+<table width="100%">
+  <tr>
+    <td class="footer__top-padding"></td>
+    <td class="footer__top-padding"></td>
+  </tr>
+</table>
+<table width="100%">
+  <tbody class="footer__tbody">
+    <tr class="footer__left__tr">
+      <td class="footer__left__td">
+        <a class="link link--unsubscribe link--underline" href="https://nexhealth.info/unsubscribe?email=<%= h CGI.escape(@user.email) %>&code=<%= h CGI.escape(@user.activation_code.to_s) %>">Opt-out from of all future communications.</strong></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- Footer No Logo End -->

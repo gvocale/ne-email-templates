@@ -1,0 +1,84 @@
+.branding {
+  width: 100%;
+
+  &__cell {
+    @include padding-top(.75);
+    @include padding-bottom(.5);
+    text-align: center;
+  }
+
+  &__logo {
+    display: block;
+    object-fit: contain;
+    text-align: center;
+    @include headline;
+    font-weight: $font-weight-normal;
+    font-size: $f-5;
+    color: $black;
+    max-width: px(30rem);
+    max-height: px(4rem);
+    margin: 0 auto;
+  }
+
+  &__link {
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    margin: 0 auto;
+    color: transparent;
+    display: inline-block;
+  }
+
+  &--nexhealth {
+
+    .branding__logo {
+      max-height: px(3rem);
+    }
+  }
+
+  &--both {
+    .branding__nexhealth {
+      text-align: left;
+      width: 50%;
+
+      .branding__logo {
+        max-height: px(3rem);
+      }
+    }
+
+    .branding__provider {
+      text-align: right;
+      width: 50%;
+    }
+  }
+
+  &--curvedental-promo {
+    @include padding-top(1.25);
+    @include padding-bottom(.75);
+
+    .branding__logo {
+      width: 80%;
+      max-width: px(30rem);
+      margin: 0 auto;
+
+      @media (orientation: landscape) {
+        width: 60%;
+      }
+    }
+  }
+
+  &--dentrix-promo {
+    @include padding-top(1.25);
+    @include padding-bottom(.75);
+
+    .branding__logo {
+      width: 80%;
+      max-width: px(30rem);
+      margin: 0 auto;
+
+      @media (orientation: landscape) {
+        width: 60%;
+      }
+    }
+  }
+}

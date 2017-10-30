@@ -1,0 +1,135 @@
+<!-- partial:../../partials/head/head.html -->
+<!-- partial -->
+<link rel="stylesheet" type="text/css" href="../../css/style-mobile.css">
+<link rel="stylesheet" type="text/css" href="../../css/style-desktop.css" inline>
+<link rel="stylesheet" type="text/css" href="../../css/style-hover.css" inline>
+<title><%= @sender.name %> sent a message<%= @user == @target ? " to you" : "" %></title>
+</head>
+
+<body>
+	<table width="100%">
+		<tr>
+			<td>
+
+				<!-- Pipe -->
+				<table width="100%" class="pipe">
+					<tr>
+						<td class="pipe__cell">
+
+							<!-- partial:../../partials/header/header-provider.html -->
+							<!-- partial -->
+
+							<!-- Header -->
+							<table width="100%" class="header">
+								<tr>
+									<td class="header__cell">
+										<h2 class="h2"><%= @sender.name %> sent a message<%= @user == @target ? " to you" : "" %></h2>
+									</td>
+								</tr>
+							</table>
+							<!-- Header End -->
+
+							<!-- Body -->
+							<table width="100%" class="body">
+								<tr>
+									<td class="body__cell">
+										<p class="p">
+											<%= simple_format @message.body %>
+										</p>
+									</td>
+								</tr>
+							</table>
+							<!-- Body End -->
+
+							<% if @user.is_patient? && @user.account_activated == false %>
+
+							<!-- partial:../../partials/divider/divider-padded.html -->
+							<!-- partial -->
+
+							<table width="100%" class="app-invite-header">
+								<tr>
+									<td class="app-invite-header__cell">
+										<h4 class="h4">
+											To reply to this message, download the NexHealth app. <br>Use your email and this unique code to sign up
+										</h4>
+									</td>
+								</tr>
+							</table>
+
+							<!-- partial:../../partials/app-invite/app-invite-card.html -->
+							<!-- partial -->
+
+							<% end %>
+
+							<!-- partial:../../partials/divider/divider-padded.html -->
+							<!-- partial -->
+
+							<!-- partial:../../partials/footer/footer-provider.html -->
+							<!-- partial -->
+
+						</td>
+					</tr>
+				</table>
+				<!-- Pipe End -->
+
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+<div class="padbox">
+	<p>Hi <strong><%= @patient.name %></strong>,<p>
+
+		<p>Smile Cafe has invited you to start using NexHealth, an appointment booking app. With NexHealth, you can skip the phone call and book your next appointment from your smartphone.</p>
+
+	</div>
+	<div class='graybox'>
+		<div class="padbox"><strong>Here's how - use the following info (exactly as shown) to sign up:</strong></div>
+		<div class="whitebox">
+			<p>
+				<strong>Email:</strong> <%= @patient.email %>
+			</p>
+			<p>
+				<strong>Activation Code:</strong> <%= @patient.activation_code %> (copy this)
+			</p>
+		</div>
+		<div class="whitebox">
+			<p>
+				<strong>iOS:</strong> <a href='http://bit.ly/nexhealth-app'>http://bit.ly/nexhealth-app</a>
+				<br><strong>Android:</strong> <a href='http://bit.ly/nex-app'>http://bit.ly/nex-app</a>
+			</p>
+		</div>
+	</div>
+
+	<div class="padbox">
+		<p>As a valued patient, Smile Cafe is offering you the following for downloading this new app by July 15, 2016 at no cost/ no obligation to you:</p>
+
+		<p>&bull; Get a $100 discount off full office fee towards Zoom Whitening
+
+			<p><small>&nbsp;&nbsp;&nbsp;and</small></p>
+
+			<p>&bull; Get a $500 discount towards full cost of future invisalign or braces treatment (does not apply to past treatments)</p>
+
+			<p><small>&nbsp;&nbsp;&nbsp;and</small></p>
+
+			<p>&bull; Get a Chance to win Extreme Smile Make Over if you are one of the first 1000 to sign up for this free app.</p>
+
+			<p><small>(Extreme Smile Make Over covers either full orthodontic treatment or 6 veneers)</small></p>
+
+		</div>
+
+
+		<div class="padbox">
+			<p>
+				<small>
+					Sent via:
+					<br><strong>Dr. <%= @doctor.name %></strong>
+					<br><%= @institution.name %> (<%= @institution.specialty %>)
+					<br><%= @institution.street_address %>
+					<br><%= @institution.city %>, <%= @institution.state %> <%= @institution.zip_code %>
+					<br><%= @institution.phone_number %>
+				</small>
+			</p>
+		</div>

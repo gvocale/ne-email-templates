@@ -1,0 +1,59 @@
+<!-- partial:../../partials/head/head.html -->
+<!-- partial -->
+<link rel="stylesheet" type="text/css" href="../../css/style-mobile.css">
+<link rel="stylesheet" type="text/css" href="../../css/style-desktop.css" inline>
+<link rel="stylesheet" type="text/css" href="../../css/style-hover.css" inline>
+<title>Hi <%= @name %>, welcome to NexHealth!</title>
+</head>
+
+<body>
+	<table width="100%">
+		<tr>
+			<td>
+
+				<!-- Pipe -->
+				<table width="100%" class="pipe">
+					<tr>
+						<td class="pipe__cell">
+
+							<!-- partial:../../partials/header/header-nexhealth-provider.html -->
+							<!-- partial -->
+
+							<!-- Header -->
+							<table width="100%" class="header">
+								<tr>
+									<td class="header__cell">
+										<h1 class="h1">Welcome to NexHealth</h1>
+									</td>
+								</tr>
+							</table>
+							<!-- Header End -->
+
+							<!-- Body -->
+							<table width="100%" class="body">
+								<tr>
+									<td class="body__cell">
+										<p class="p">
+											Thank you for signing up. <strong style="font-weight: 400;">Dr. <%= @doctor.name %></strong>'s office may contact you for additional information. If you have any questions or concerns, please email us at <a href="mailto:hello@nexhealth.com" style="color: #52585E; margin: 0; text-decoration: none;" class="link-tertiary"><strong style="font-weight: 400">hello@nexhealth.com</strong></a>
+										</p>
+									</td>
+								</tr>
+							</table>
+							<!-- Body End -->
+
+							<!-- partial:../../partials/divider/divider-padded.html -->
+							<!-- partial -->
+
+							<!-- partial:../../partials/footer/footer-no-logo.html -->
+							<!-- partial -->
+
+						</td>
+					</tr>
+				</table>
+				<!-- Pipe End -->
+
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

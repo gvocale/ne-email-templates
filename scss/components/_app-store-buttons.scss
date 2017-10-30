@@ -1,0 +1,12 @@
+.app-store-buttons {
+
+  &__cell {
+    text-align: center;
+    @include padding-top(.125);
+    @include padding-bottom(.5);
+  }
+
+  &__btn {
+    padding: 4px;
+  }
+}

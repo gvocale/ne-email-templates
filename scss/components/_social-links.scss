@@ -1,0 +1,27 @@
+.social-links {
+
+  &__header {
+    text-align: center;
+    @include padding-top(.25);
+    @include padding-bottom(.125);
+  }
+
+  &__buttons {
+    text-align: center;
+    @include padding-top(.125);
+    @include padding-bottom(.25);
+  }
+
+  &__button {
+    padding: px(.5rem);
+  }
+
+  &__img {
+    width: px(2rem);
+    height: px(2rem);
+  }
+
+  &__link {
+    font-size: $f-5;
+  }
+}

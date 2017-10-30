@@ -1,0 +1,47 @@
+<!-- partial:../../partials/head/head.html -->
+<!-- partial -->
+<link rel="stylesheet" type="text/css" href="../../css/style-mobile.css">
+<link rel="stylesheet" type="text/css" href="../../css/style-desktop.css" inline>
+<link rel="stylesheet" type="text/css" href="../../css/style-hover.css" inline>
+<title><%= @header.html_safe="" %=""></%=></title>
+</head>
+
+<body>
+	<table class="ptmeta">
+		<tr>
+			<td class="ptmleft" style="text-align: center; width: 75%;">
+				<p class="ptmtitle" style="font-size: 3em; font-weight: 300; margin: 4px 0 8px;">Your weekly summary</p>
+				<p class="ptmrange" style="color: #999; margin: 4px 0 8px; text-transform: uppercase;"><small><%= @datapoints[:ranges][0][0].strftime("%a="" %b="" %e")="" %=""> to <%= @datapoints[:ranges][0][1].strftime("%a="" %b="" %e")="" %=""></%=></%=></small></p>
+				<p style="margin: 4px 0 8px; margin-bottom: 4px;">Hope you had a good weekend! Here's a summary of last week's activity at <strong><%= @subject.name="" %=""></%=></strong>.</p>
+			</td>
+			<td class="ptmright" style="text-align: center; width: 25%;">
+				<img style="width:100%;" src="https://s3.amazonaws.com/nexhealth-images-production/email/pie_2x.png">
+			</td>
+		</tr>
+	</table>
+
+	<% ks1="{appts_scheduled:" {},="" appts_rescheduled:="" appts_cancelled:="" appts_noshow:="" {}}="" %="">
+	<% ks2="{appts_checkin:" {},="" copays_processed:="" {currency:="" true},="" reminders:="" patient_satisfaction:="" {}}="" %="">
+	<table class="ptwrap" style="border-collapse: collapse,;">
+		<tr><td colspan="4" style="padding: 32px 16px; text-align: center;"><hr style="background-color: #cccccc; border: 0; height: 1px; max-width: 400px;"></td></tr>
+		<tr class="ptwrap" style="border-collapse: collapse,;">
+			<% ks1.each="" do="" |k,v|="" %="">
+			<%= render="" partial:="" "email="" analytics="" subitem",="" locals:="" {pt:="" @datapoints[:data][k.to_s],="" ptopts:="" v,="" key:="" k="" }="" %="">
+			<% end="" %="">
+			</%></%=></%></tr>
+			<tr><td colspan="4" style="padding: 32px 16px; text-align: center;"><hr style="background-color: #cccccc; border: 0; height: 1px; max-width: 400px;"></td></tr>
+			<tr class="ptwrap" style="border-collapse: collapse,;">
+				<% ks2.each="" do="" |k,v|="" %="">
+				<%= render="" partial:="" "email="" analytics="" subitem",="" locals:="" {pt:="" @datapoints[:data][k.to_s],="" ptopts:="" v,="" key:="" k="" }="" %="">
+				<% end="" %="">
+				</%></%=></%></tr>
+				<tr><td colspan="4" style="padding: 32px 16px; text-align: center;"><hr style="background-color: #cccccc; border: 0; height: 1px; max-width: 400px;"></td></tr>
+				<tr>
+					<td colspan="4" style="padding: 32px 16px; text-align: center;">
+						<a class="btn greenbtn m0a" href="https://www.nexhealth.com/app/analytics" target="_blank" style="background-color: #8ce097; border-radius: 24px; color: white !important; cursor: pointer; display: inline-block; font-size: 1em; font-weight: bold; margin: 0 auto; padding: 16px 24px; text-decoration: none;">
+							See how you compare to previous weeks
+						</a>
+					</td>
+				</tr>
+			</table>
+			</%></%>

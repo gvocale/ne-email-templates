@@ -1,0 +1,53 @@
+.news {
+
+	&__cell {
+		@include padding-top(2);
+		@include padding-bottom(1);
+	}
+
+	&__eyebrow {
+		@include eyebrow;
+		@include margin-bottom(.25);
+		color: $gray;
+		font-size: $f-3;
+
+		@media ($lg) {
+			font-size: $f-5 !important;
+		}
+	}
+
+	&__headline {
+		@include headline;
+		font-size: $f-6;
+		font-weight: $font-weight-normal;
+		line-height: 1.1;
+		color: $cyan;
+
+		@media ($lg) {
+			font-size: $f-7 !important;
+		}
+
+		&--text {
+			color: $black;
+		}
+	}
+
+	&__item {
+		@include padding-top(.75);
+		@include padding-bottom(.75);
+		border-bottom: 1px solid $gray-lightest !important;
+		width: 100%;
+		padding-left: 0;
+		box-sizing: border-box;
+		margin-right: px(2rem);
+
+		&--last {
+			box-shadow: none !important;
+		}
+	}
+
+	&__arrow {
+		width: px(.6rem);
+		vertical-align: 1px;
+	}
+}

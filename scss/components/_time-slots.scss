@@ -1,0 +1,185 @@
+.time-slots {
+
+  &--padded {
+    @include padding-top(.25);
+    @include padding-bottom(.25);
+  }
+
+  &__day {
+    @include p;
+    white-space: nowrap;
+    font-size: $f-4;
+    margin-top: 0;
+  }
+
+  &__arrow-right {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    opacity: 0.4;
+
+    &:hover {
+      opacity: .8 !important;
+    }
+
+    &:active {
+      opacity: 1 !important;
+    }
+  }
+
+  &__arrow-down {
+    height: 10px;
+    margin: 0;
+    padding-left: 2px;
+  }
+
+  &__arrow-down-inverse {
+    display: none;
+    font-size: 0;
+    line-height: 0;
+    mso-hide: all;
+    max-height: 0;
+    max-width: 0;
+    padding-left: 2px;
+    width: 0;
+   	margin: 0;
+  }
+
+  &__slot {
+    @include button-font;
+    background-color: $gray-lightest;
+    border-radius: 4px;
+    border: 0;
+    color: $black;
+    display: block;
+    font-size: $f-4;
+    height: 100%;
+    line-height: 1;
+    margin: 0 auto;
+    outline: none;
+    padding: px(.7rem) px(.5rem);
+    text-align: center;
+    text-decoration: none;
+    transform: translateY(0px);
+    vertical-align: middle;
+    white-space: nowrap;
+
+    .period {
+      font-size: 80%;
+    }
+  }
+
+  &__slot-container {
+    width: 30%;
+    text-align: center;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+
+  &__more {
+
+    &:hover {
+
+      .time-slots__arrow-down {
+        display: none !important;
+      }
+
+      .time-slots__arrow-down-inverse {
+        display: inline-block !important;
+        max-height: none !important;
+        overflow: visible !important;
+        width: auto !important;
+        height: 10px !important;
+        max-width: none !important;
+      }
+    }
+  }
+
+  &__td {
+    width: 50%;
+
+
+    &--eyebrow {
+      vertical-align: middle;
+      @include padding-bottom(.125);
+
+      @media (max-width: 991px) {
+        display: none !important;
+      }
+    }
+
+    &--nav {
+      vertical-align: middle;
+      @include padding-bottom(.125);
+
+      @media (max-width: 991px) {
+        width: 100% !important;
+      }
+
+      .h6 {
+        margin-bottom: 0;
+      }
+
+      td {
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+
+    &--doctor-card {
+      vertical-align: top;
+      width: 50%;
+      text-align: left;
+      @include padding-top(.125);
+
+      @media (max-width: 991px) {
+        width: 90% !important;
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+      }
+    }
+
+    &--slots {
+      vertical-align: top;
+
+      @media (max-width: 991px) {
+        width: 100% !important;
+        order: -1;
+        padding-bottom: 20px !important;
+      }
+    }
+  }
+
+  &__flex {
+
+    @media (max-width: 991px) {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+    }
+  }
+
+  &__eyebrow {
+    @include eyebrow;
+    font-size: $f-3;
+  }
+}
+
+a.time-slots__slot {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $cyan !important;
+    color: $white !important;
+    transform: translateY(1px) !important;
+  }
+
+  &:active,
+  &:target {
+    background-color: darken($cyan, 5%) !important;
+    color: $white !important;
+  }
+}

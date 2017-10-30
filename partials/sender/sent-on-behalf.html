@@ -1,0 +1,20 @@
+<!-- Sent On Behalf -->
+<table width="100%" class="sender">
+  <tr>
+    <td class="sender__cell">
+      <h6 class="h6">SENT ON BEHALF OF</h6>
+      <p class="p">
+        <strong><%= @doctor.name %></strong>
+        <br>
+        <%= @location.name %> <%= @location.specialty %>
+        <br>
+        <%= @location.street_address %>
+        <br>
+        <%= @location.city %>, <%= @location.state %> <%= @location.zip_code %>
+        <br>
+        <%= @location.phone_number %>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- Sent On Behalf End -->

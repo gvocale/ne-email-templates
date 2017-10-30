@@ -1,0 +1,12 @@
+@mixin pipe-cell {
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+
+@mixin pipe-table {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,116 @@
+@mixin wysiwyg {
+
+	body, h1, h2, h3, h4, h5, h6, p, a {
+		font-family: $roboto;
+	}
+
+	body {
+		@include p;
+		font-size: $f-5;
+	}
+
+	h1:not([class]) {
+		@include headline;
+		font-size: $f-8;
+		font-weight: $font-weight-light;
+		margin-bottom: .5em;
+	}
+
+	h2:not([class]) {
+		@include headline;
+		font-size: $f-7;
+		font-weight: $font-weight-light;
+		margin-bottom: .5em;
+	}
+
+	h3:not([class]) {
+		@include headline;
+		font-weight: $font-weight-normal;
+		font-size: $f-6;
+		margin-bottom: .5em;
+	}
+
+	h4:not([class]) {
+		@include headline;
+		font-weight: $font-weight-normal;
+		font-size: $f-5;
+		margin-bottom: .5em;
+	}
+
+	h5:not([class]) {
+		@include headline;
+		font-weight: $font-weight-normal;
+		font-size: $f-4;
+		margin-bottom: .5em;
+	}
+
+	h6:not([class]) {
+		@include headline;
+		font-weight: $font-weight-normal;
+		font-size: $f-3;
+		margin-bottom: .5em;
+	}
+
+	p:not([class]) {
+		@include p;
+		font-size: $f-5;
+		margin: 0;
+		margin-bottom: .5em;
+	}
+
+	h1:not([class]),
+	h2:not([class]),
+	h3:not([class]),
+	h4:not([class]),
+	h5:not([class]),
+	h6:not([class]),
+	p:not([class]) {
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	strong {
+		font-weight: $font-weight-bold;
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	a {
+		cursor: pointer;
+		outline: none;
+
+		&:not([class]) {
+			color: $cyan;
+		}
+	}
+
+	ul {
+		-webkit-padding-start: px(1.5rem);
+
+		li {
+			list-style: square;
+			list-style-position: outside;
+		}
+	}
+
+	ol {
+		-webkit-padding-start: px(1.5rem);
+
+		li {
+			list-style: decimal;
+			list-style-position: outside;
+		}
+	}
+
+	li:not([class]) {
+		margin-bottom: 1em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.header {
+  width: 100%;
+
+  &__cell {
+    @include padding-top(.25);
+    @include padding-bottom(.25);
+  }
+
+  &--curvedental-promo {
+
+    .header__cell {
+      @include padding-top(.25);
+      @include padding-bottom(.25);
+    }
+  }
+}

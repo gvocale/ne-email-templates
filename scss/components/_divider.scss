@@ -1,0 +1,12 @@
+.divider {
+
+	&--margin {
+		@include margin-top(.75);
+		@include margin-bottom(.75);
+	}
+
+	&__cell {
+		@include padding-top(.25);
+		@include padding-bottom(.25);
+	}
+}

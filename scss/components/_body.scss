@@ -1,0 +1,22 @@
+@import "../wysiwyg/wysiwyg";
+
+.body {
+  width: 100%;
+  min-width: 100%;
+
+  &__cell {
+    @include padding-top(.25);
+    @include padding-bottom(.25);
+    @include p;
+    font-size: $f-5;
+    margin-bottom: .5em;
+
+    div {
+      @include p;
+      font-size: $f-5;
+      margin-bottom: .5em;
+    }
+
+    @include wysiwyg;
+  }
+}

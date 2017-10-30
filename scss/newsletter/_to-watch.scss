@@ -1,0 +1,105 @@
+.to-watch {
+
+	&__cell {
+		@include padding-top(.5);
+		@include padding-bottom(.5);
+	}
+
+	&__eyebrow {
+		@include eyebrow;
+		@include padding-bottom(.75);
+		color: $gray;
+		font-size: $f-3;
+
+		@media ($lg) {
+			font-size: $f-5 !important;
+		}
+	}
+
+	&__person {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	&__figure {
+		@include margin(1,auto);
+		flex-shrink: 0;
+
+		@media ($lg) {
+			margin-top: 0 !important;
+		}
+	}
+
+	&__img-box {
+		position: relative;
+		width: px(10rem);
+		height: px(10rem);
+		overflow: hidden;
+		border-radius: px(10rem);
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: $gray-lightest;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		mix-blend-mode: darken;
+		text-align: center;
+		filter: grayscale(100%) brightness(120%);
+		@include headline;
+		font-size: $f-3;
+		border-radius: px(10rem);
+	}
+
+	&__caption {
+		margin-top: .75em;
+		text-align: center;
+		@include headline;
+		font-size: $f-5;
+		font-weight: $font-weight-normal;
+		color: $gray-dark;
+
+		@media ($lg) {
+			font-size: $f-6 !important;
+		}
+	}
+
+	&__p {
+		@include p;
+		font-size: $f-5;
+
+		@media ($lg) {
+			font-size: $f-6 !important;
+		}
+	}
+
+	&__text {
+
+		@media ($lg) {
+			display: inline-block !important;
+			width: calc(100% - #{px(14rem)});
+			float: left;
+		}
+	}
+
+	&__photo {
+
+		@media ($lg) {
+			display: inline-block !important;
+			width: px(14rem);
+		}
+
+		> td {
+			width: 100%;
+			display: block;
+			text-align: center;
+		}
+	}
+}

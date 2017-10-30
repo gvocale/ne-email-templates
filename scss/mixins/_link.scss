@@ -1,0 +1,62 @@
+@mixin link {
+	-webkit-font-smoothing: antialiased;
+	border: 0;
+	cursor: pointer;
+	font-family: $roboto;
+	font-weight: $font-weight-normal;
+	margin: 0;
+	outline: none;
+	text-decoration: none;
+}
+
+@mixin link-underline {
+	display: inline !important;
+	position: relative;
+	background: linear-gradient(to bottom, currentColor 25%, transparent 25%);
+	background-repeat: no-repeat;
+	background-position: right 1.1em;
+	background-size: 0% .25em;
+	transition: background-size 0.3s;
+
+	&:hover {
+		background-image: linear-gradient(to bottom, currentColor 25%, transparent 25%) !important;
+		background-size: 100% 0.25em !important;
+		background-position: left 1.1em !important;
+	}
+}
+
+@mixin link-primary {
+	color: $cyan;
+
+	&:hover {
+		color: darken($cyan, 5%) !important;
+	}
+
+	&.link--underline:hover {
+		color: $cyan !important;
+	}
+}
+
+@mixin link-secondary {
+	color: $black;
+
+	&:hover {
+		color: $cyan !important;
+	}
+
+	&.link--underline:hover {
+		color: $black !important;
+	}
+}
+
+@mixin link-tertiary {
+	color: $gray-dark;
+
+	&:hover {
+		color: $cyan !important;
+	}
+
+	&.link--underline:hover {
+		color: $gray-dark !important;
+	}
+}

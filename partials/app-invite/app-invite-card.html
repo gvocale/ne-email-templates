@@ -1,0 +1,36 @@
+<!-- App Invite Card End -->
+<table class="app-invite">
+  <tr>
+    <td class="app-invite__cell">
+      <table>
+        <tr>
+          <td class="app-invite__card">
+            <table>
+              <tr>
+                <td class="app-invite__group">
+                  <h6 class="h6">EMAIL</h6>
+                  <p class="app-invite__email"><%= @patient.email %></p>
+                </td>
+              </tr>
+              <tr>
+                <td class="app-invite__group">
+                  <h6 class="h6">ACTIVATION CODE</h6>
+                  <p class="app-invite__code"><%= @patient.activation_code %></p>
+                </td>
+              </tr>
+              <tr>
+                <td class="app-invite__buttons">
+
+                  <!-- partial:../../partials/buttons/app-store-buttons.html -->
+                  <!-- partial -->
+
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- App Invite Card End -->

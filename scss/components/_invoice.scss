@@ -1,0 +1,72 @@
+.invoice {
+
+  &__cell {
+    @include padding-top(.25);
+    @include padding-bottom(.25);
+  }
+
+  &__eyebrow {
+    @include eyebrow;
+    @include padding-top(.062);
+    @include padding-bottom(.062);
+    font-size: $f-3;
+    text-align: left;
+    border-bottom: solid 1px $gray-lightest;
+
+    &--amount {
+      text-align: right;
+    }
+  }
+
+  &__tfoot-td {
+    border-top: solid 1px $gray-lightest;
+    @include padding-top(.25);
+    @include padding-bottom(.25);
+  }
+
+  &__amount {
+    text-align: right;
+  }
+
+  &__total-amount {
+    text-align: right;
+    @include p;
+    font-size: $f-6;
+  }
+
+  &__td-padding {
+    @include padding-top(.125);
+    @include padding-bottom(.125);
+  }
+
+  &__provider,
+  &__description,
+  &__date,
+  &__amount {
+    @include p;
+    @include padding-top(.062);
+    @include padding-bottom(.062);
+  }
+
+  &__amount,
+  &__description {
+    font-size: $f-5;
+  }
+
+  &__provider,
+  &__date {
+    color: $gray-dark;
+    font-size: $f-4;
+  }
+
+  &__due-date {
+    text-align: left;
+    @include p;
+    font-size: $f-5;
+    width: 70%;
+  }
+
+  &__button {
+    text-align: right;
+  }
+}

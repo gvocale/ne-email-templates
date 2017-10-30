@@ -1,0 +1,8 @@
+.sender {
+	text-align: center;
+
+	&__cell {
+    @include padding-top(.25);
+    @include padding-bottom(.25);
+  }
+}

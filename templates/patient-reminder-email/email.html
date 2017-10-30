@@ -1,0 +1,93 @@
+<!-- partial:../../partials/head/head.html -->
+<!-- partial -->
+<link rel="stylesheet" type="text/css" href="../../css/style-mobile.css">
+<link rel="stylesheet" type="text/css" href="../../css/style-desktop.css" inline>
+<link rel="stylesheet" type="text/css" href="../../css/style-hover.css" inline>
+<title>You have an upcoming appointment with <%= @provider.doctor_name %></title>
+</head>
+
+<body>
+	<table width="100%">
+		<tr>
+			<td>
+
+				<!-- Pipe -->
+				<table width="100%" class="pipe">
+					<tr>
+						<td class="pipe__cell">
+
+							<!-- partial:../../partials/header/header-nexhealth.html -->
+							<!-- partial -->
+
+							<!-- Body -->
+							<table width="100%" class="body">
+								<tr>
+									<td class="body__cell">
+										<p class="p">
+											<strong style="font-weight:400">Hi <%= @patient.name %></strong>,<br>
+											you have an upcoming appointment at <%= @time %>
+											<% if @appt.misc['hide_provider_name'] %>
+											with <%= @provider.doctor_name %>
+											<% else %>
+											at <%= @appt.location_name %>
+											<% end %>!</a>
+										</p>
+									</td>
+								</tr>
+							</table>
+							<!-- Body End -->
+
+							<!-- Appt Details -->
+							<table width="100%" style="padding: 16px;">
+								<tr>
+									<td>
+										<h2 style="font-size: 16px; letter-spacing: -0.01em; font-weight: 400; line-height: 1.25; margin: 0 0 8px 0;">Your appointment will be held at</h2>
+										<p style="font-size: 16px; max-width: 40em; line-height: 150%; font-weight: 300; margin: 0; margin-bottom: 32px;">
+											<%= @location.name %>
+											<br><%= @location.street_address %>
+											<br><%= @location.city %>, <%= @location.state %> <%= @location.zip_code %>
+										</p>
+										<p style="font-size: 16px; max-width: 40em; line-height: 150%; font-weight: 300; margin: 0;">If you can't make it to your appointment, please make sure you cancel or reschedule on your NexHealth app.</p>
+									</td>
+								</tr>
+							</table>
+							<!-- Appt Details -->
+
+							<% if @patient.account_activated == false%>
+
+							<!-- partial:../../partials/divider/divider-padded.html -->
+							<!-- partial -->
+
+							<!-- Header -->
+							<table width="100%" class="header">
+								<tr>
+									<td class="header__cell">
+										<h4 class="h4">
+											If you're not using the NexHealth app, what are you waiting for?<br>Use your email and this unique code to sign up:
+										</h4>
+									</td>
+								</tr>
+							</table>
+							<!-- Header End -->
+
+							<!-- partial:../../partials/app-invite/app-invite-card.html -->
+							<!-- partial -->
+
+							<% end %>
+
+							<!-- partial:../../partials/divider/divider-padded.html -->
+							<!-- partial -->
+
+							<!-- partial:../../partials/footer/footer-provider.html -->
+							<!-- partial -->
+
+						</td>
+					</tr>
+				</table>
+				<!-- Pipe End -->
+
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
